@@ -3,6 +3,6 @@
     "project_slug": "{{cookiecutter.name|lower|replace(' ', '_')}}",
     "slug": "{{cookiecutter.project_slug|replace('_', '-')}}",
     "description": "This is the description of the package",
-    "url": "https://github.com/kjaymiller/{{project_slug}}",
+    "url": "https://github.com/kjaymiller/{{cookiecutter.project_slug}}",
     "_dynamic": "[\"version\"]"
 }
