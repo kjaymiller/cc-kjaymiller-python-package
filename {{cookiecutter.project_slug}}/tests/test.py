@@ -1,3 +1,3 @@
-from {{cookiecutter.package_name}} import {{cookiecutter.package_name}}
+from {{cookiecutter.project_slug}} import {{cookiecutter.project_slug}}
 # import pytest
 # from pathlib import Path
