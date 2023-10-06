@@ -25,7 +25,7 @@ package-dir = {"" = "{{cookiecutter.project_slug}}"}
 
 [project.urls]
 homepage = "{{cookiecutter.url}}"
-repository = "https://github.com/kjaymiller/{{cookiecutter.repository}}/"
+repository = "{{cookiecutter.url}}"
 
 [tool.pytest.ini_options]
 pythonpath = ["{{cookiecutter.project_slug}}"]
