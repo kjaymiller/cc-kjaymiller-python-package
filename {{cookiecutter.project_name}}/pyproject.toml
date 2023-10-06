@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+
+[project]
+name = "{{cookiecutter.project_name|lower|replace(' ', '-')}}"
+dynamic = {{cookiecutter._dynamic}}
+description = "{{cookiecutter.description}}"
+readme = "README.md"
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "black",
+    ]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[project.urls]
+homepage = "{{cookiecutter.url}}"
+repository = "https://github.com/kjaymiller/{{cookiecutter.repository}}/"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
