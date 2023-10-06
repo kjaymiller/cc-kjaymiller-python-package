@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 local_scheme = "no-local-version"
 
 [project]
-name = "{{cookiecutter.project_name|lower|replace(' ', '-')}}"
+name = "{{cookiecutter.project_slug|lower|replace(' ', '-')}}"
 dynamic = {{cookiecutter._dynamic}}
 description = "{{cookiecutter.description}}"
 readme = "README.md"
@@ -21,11 +21,11 @@ dev = [
     ]
 
 [tool.setuptools]
-package-dir = {"" = "{{cookiecutter.project_name}}"}
+package-dir = {"" = "{{cookiecutter.project_slug}}"}
 
 [project.urls]
 homepage = "{{cookiecutter.url}}"
 repository = "https://github.com/kjaymiller/{{cookiecutter.repository}}/"
 
 [tool.pytest.ini_options]
-pythonpath = ["{{cookiecutter.project_name}}"]
+pythonpath = ["{{cookiecutter.project_slug}}"]
